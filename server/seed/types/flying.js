@@ -5,22 +5,22 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async ()=>{
     const flying = [{
-        name:'Charmander',
+        name:'Rookidee',
         hp: 15,
         level:5
      },
      {
-        name:'Tepig',
+        name:'Noibat',
         hp: 14,
         level:5
      },
      {
-        name:'Rapidash',
+        name:'Tropius',
         hp:100,
         level:20
      },
      {
-        name:'Scorbunny',
+        name:'Rowlet',
         hp:50,
         level:10
      }

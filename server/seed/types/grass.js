@@ -5,22 +5,22 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async ()=>{
     const grass = [{
-        name:'Charmander',
+        name:'Chikorita',
         hp: 15,
         level:5
      },
      {
-        name:'Tepig',
+        name:'Snivy',
         hp: 14,
         level:5
      },
      {
-        name:'Rapidash',
+        name:'Lurantis',
         hp:100,
         level:20
      },
      {
-        name:'Scorbunny',
+        name:'Cottonee',
         hp:50,
         level:10
      }
