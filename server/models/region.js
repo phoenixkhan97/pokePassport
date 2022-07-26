@@ -8,4 +8,4 @@ const Region = new Schema(
     },
     {timestamps:true}
 )
-modeule.exports = Region
+module.exports = Region

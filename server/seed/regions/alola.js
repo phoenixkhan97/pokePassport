@@ -1,5 +1,5 @@
-const db = require('../db')
-const {Region} = require('../models')
+const db = require('../../db')
+const {Region} = require('../../models')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
@@ -8,10 +8,10 @@ const alola = {
           name: "Alola Region",
           description:"The Alola region consists of four main islands that varies in terrain and weather."
 }
+await Region.insertMany(alola)
 
 }
 
-await Region.insertOne(alola)
 
 const run = async () => {
     await main()

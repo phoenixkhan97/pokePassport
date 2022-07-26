@@ -9,4 +9,4 @@ const Type = new Schema(
     },
     {timestamps:true}
 )
-modeule.exports = Type
+module.exports = Type

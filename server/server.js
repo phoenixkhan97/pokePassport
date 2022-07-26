@@ -1,17 +1,18 @@
 const express = require('express')
 const cors = require('cors')
 const logger = require ('morgan')
-const routes = require('./routes')
+//const routes = require('./routes')
 const PORT = 3001
 const db = require('./db')
 const {Region} = require('./models')
-const {Type} = require('./models')
+ const {Type} = require('./models')
 
 const app = express()
 
 app.use(cors())
 app.use(express.json())
 app.use(logger('dev'))
+//app.use(router)
 
 
 app.get('/regions', async (req,res) =>{
@@ -19,9 +20,36 @@ app.get('/regions', async (req,res) =>{
     res.json(regions)
 })
 
-app.get('/type', async (req,res) =>{
-    const types = await Type.find({})
-    res.json(types)
+app.get('/types', async (req,res) =>{
+    const type = await Type.find({})
+    res.json(type)
 })
 
+
+
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
