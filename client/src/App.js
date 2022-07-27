@@ -1,18 +1,17 @@
-import logo from './logo.svg';
+import Home from "./components/Home"
+import Character from './components/Character'
+import React from 'react'
+import {Routes, Route} from 'react-router-dom'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-       <Home>
-       <h1>Pokemon Passport</h1>
-       <p>Welcome to Poke Airlines</p>
-       </Home>
 
        <main>
         <Routes>
-          <Route></Route>
-          <Route></Route>
+          <Route path="/" element={<Home />}/>
+          <Route path='./components/characters' element={<Character/>}/>
           <Route></Route>
           <Route></Route>
           <Route></Route>
