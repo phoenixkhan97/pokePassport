@@ -4,8 +4,11 @@
 
 body{
   background-image: url(https://i.pinimg.com/564x/5f/01/ad/5f01adaad8ab57a55ed95fe08962a26d.jpg);
-  background-size:cover;
-  
+  background-image:cover;
+  background-repeat: no-repeat;
+  background-attachment:fixed ;
+  overflow:hidden;
+
 }
 
 .box{
