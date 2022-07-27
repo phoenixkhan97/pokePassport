@@ -10,7 +10,7 @@ const Home =()=>{
             <Button
             text = "Lets get started!"
             />
-            <div className='box'></div>
+            
         </div>
     )
     }

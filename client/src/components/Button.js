@@ -6,8 +6,8 @@ const Button =({text})=>{
     
     return(
         <div>
-            <Link to='../pages/characters'>
-            <button className="startbtn">{text}</button></Link>
+            <Link to='./characters'>
+            <button className="btn">{text}</button></Link>
             
         </div>
         

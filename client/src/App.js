@@ -1,5 +1,6 @@
 import Home from "./components/Home"
 import Character from './components/Character'
+import Information from './components/Information'
 import React from 'react'
 import {Routes, Route} from 'react-router-dom'
 import './App.css';
@@ -11,8 +12,8 @@ function App() {
        <main>
         <Routes>
           <Route path="/" element={<Home />}/>
-          <Route path='./components/characters' element={<Character/>}/>
-          <Route></Route>
+          <Route path='/characters' element={<Character/>}/>
+          <Route path='/information' element={<Information/>}/>
           <Route></Route>
           <Route></Route>
         </Routes>
