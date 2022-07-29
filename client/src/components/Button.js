@@ -6,6 +6,7 @@ const Button =({text})=>{
     
     return(
         <div>
+            
             <Link to='./characters'>
             <button className="btn">{text}</button></Link>
             

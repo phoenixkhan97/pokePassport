@@ -4,12 +4,17 @@ const Home =()=>{
 
     
     return(
-        <div>
-            <h1 className='heading'>Pokemon Passport</h1>
-            <p> Welcome!</p>
+        <div className="passport">
+            <div className='textbox'>
+            <h1>Pokemon Passport</h1>
+           
             <Button
             text = "Lets get started!"
             />
+            </div>
+            
+            <p className="cup"></p>
+           
             
         </div>
     )
