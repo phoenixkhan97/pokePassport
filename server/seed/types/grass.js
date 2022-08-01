@@ -6,22 +6,26 @@ const main = async ()=>{
     const grass = [{
         name:'Chikorita',
         hp: 15,
-        level:5
+        level:5,
+        value:"grass"
      },
      {
         name:'Snivy',
         hp: 14,
-        level:5
+        level:5,
+        value:"grass"
      },
      {
         name:'Lurantis',
         hp:100,
-        level:20
+        level:20,
+        value:"grass"
      },
      {
         name:'Cottonee',
         hp:50,
-        level:10
+        level:10,
+        value:"grass"
      }
    ]
 

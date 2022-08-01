@@ -7,22 +7,26 @@ const main = async ()=>{
     const ghost = [{
         name:'Shuppet',
         hp: 15,
-        level:5
+        level:5,
+        value:"ghost"
      },
      {
         name:'Duskull',
         hp: 14,
-        level:5
+        level:5,
+        value:"ghost"
      },
      {
         name:'Lampent',
         hp:100,
-        level:20
+        level:20,
+        value:"ghost"
      },
      {
         name:'Haunter',
         hp:50,
-        level:10
+        level:10,
+        value:"ghost"
      }
    ]
 

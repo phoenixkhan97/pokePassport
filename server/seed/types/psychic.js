@@ -7,22 +7,26 @@ const main = async ()=>{
     const psychic = [{
         name:'Abra',
         hp: 15,
-        level:5
+        level:5,
+        value:"psychic"
      },
      {
         name:'Espurr',
         hp: 14,
-        level:5
+        level:5,
+        value:"psychic"
      },
      {
         name:'Mr.Mime',
         hp:100,
-        level:20
+        level:20,
+        value:"psychic"
      },
      {
         name:'Espeon',
         hp:50,
-        level:10
+        level:10,
+        value:"psychic"
      }
    ]
 

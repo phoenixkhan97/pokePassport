@@ -7,22 +7,26 @@ const main = async ()=>{
     const bug = [{
         name:'Joltik',
         hp: 15,
-        level:5
+        level:5,
+        value:"bug"
      },
      {
         name:'Parasect',
         hp: 24,
-        level:8
+        level:8,
+        value:"bug"
      },
      {
         name:'Vikavolt',
         hp:100,
-        level:20
+        level:20,
+        value:"bug"
      },
      {
         name:'Ninjask',
         hp:50,
-        level:10
+        level:10,
+        value:"bug"
      }
    ]
 

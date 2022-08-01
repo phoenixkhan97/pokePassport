@@ -7,22 +7,26 @@ const main = async ()=>{
     const ice = [{
         name:'Snorunt',
         hp: 15,
-        level:5
+        level:5,
+        value:"ice"
      },
      {
         name:'Cubchoo',
         hp: 14,
-        level:5
+        level:5,
+        value:"ice"
      },
      {
         name:'Froslass',
         hp:100,
-        level:20
+        level:20,
+        value:"ice"
      },
      {
         name:'Spheal',
         hp:50,
-        level:10
+        level:10,
+        value:"ice"
      }
    ]
 

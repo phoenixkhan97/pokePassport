@@ -7,22 +7,26 @@ const main = async ()=>{
     const fairy = [{
         name:'Togepi',
         hp: 15,
-        level:5
+        level:5,
+        value:"fairy"
      },
      {
         name:'Ralts',
         hp: 14,
-        level:5
+        level:5,
+        value:"fairy"
      },
      {
         name:'Clefairy',
         hp:100,
-        level:20
+        level:20,
+        value:"fairy"
      },
      {
         name:'Snubbull',
         hp:50,
-        level:10
+        level:10,
+        value:"fairy"
      }
    ]
 

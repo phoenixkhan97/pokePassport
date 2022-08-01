@@ -7,22 +7,26 @@ const main = async ()=>{
     const flying = [{
         name:'Rookidee',
         hp: 15,
-        level:5
+        level:5,
+        value:"flying"
      },
      {
         name:'Noibat',
         hp: 14,
-        level:5
+        level:5,
+        value:"flying"
      },
      {
         name:'Tropius',
         hp:100,
-        level:20
+        level:20,
+        value:"flying"
      },
      {
         name:'Rowlet',
         hp:50,
-        level:10
+        level:10,
+        value:"flying"
      }
    ]
 

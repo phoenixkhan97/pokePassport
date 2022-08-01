@@ -7,22 +7,26 @@ const main = async ()=>{
     const fighting = [{
         name:'Machop',
         hp: 15,
-        level:5
+        level:5,
+        value:"fighting"
      },
      {
         name:'Riolu',
         hp: 14,
-        level:5
+        level:5,
+        value:"fighting"
      },
      {
         name:'Kubfu',
         hp:100,
-        level:20
+        level:20,
+        value:"fighting"
      },
      {
         name:'Panchamp',
         hp:50,
-        level:10
+        level:10,
+        value:"fighting"
      }
    ]
 
