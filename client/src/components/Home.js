@@ -6,7 +6,7 @@ const Home =()=>{
     return(
         <div className="passport">
             <div className='textbox'>
-            <h1>Pokemon Passport</h1>
+            <h1 className="home">Pokemon Passport</h1>
            
             <Button
             text = "Lets get started!"

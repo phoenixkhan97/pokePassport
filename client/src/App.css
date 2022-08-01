@@ -4,10 +4,32 @@ body{
   background-image: url(https://i.ibb.co/rZgRnhD/deskbgpaneledbrightt.png);
   background-image:cover;
   background-attachment:fixed ;
-  overflow:hidden;
 
 }
-
+.textboxboth
+{
+  position:relative;
+  width:250px;
+  height:auto;
+  font-size: 9px;
+  z-index:1;
+}
+.textboxbothcontainer
+{
+  width:250px;
+  height:300px;
+  position:absolute;
+  top:40px;
+  left:320px;
+  z-index:1;
+  overflow-y:scroll;
+  overflow-x:hidden;
+}
+.linebreak
+{
+  width:100px;
+  height:15px;
+}
 .textbox{
   color:rgb(96, 68, 30);
   position:relative;
@@ -21,13 +43,46 @@ body{
   text-align: center;
   
 }
+.textbox1{
+  color:rgb(96, 68, 30);
+  position:relative;
+  right:150px;
+  top: 35px;
+  width:250px;
+  height:370px;
+  z-index: 2;
+  font-size:25px;
+  margin:auto;
+  text-align: center;
+  
+}
+.textbox2{
+  color:rgb(96, 68, 30);
+  position:relative;
+  left:150px;
+  top: -350px;
+  width:250px;
+  height:370px;
+  z-index: 2;
+  font-size:15px;
+  margin:auto;
+  text-align: center;
+  
+}
+h1{
+  font-size: 25px;
+}
+
+.home{
+  font-size: 40px;
+}
 
 
 .btn{
   background-color:lightcoral;
   color:white;
   padding:0 1rem;
-  margin-top: 100px;
+  margin-top: 30px;
   z-index:2;
   
 
@@ -48,9 +103,20 @@ body{
   top:80px;
   
 }
+.passport1{
+  background-image: url(https://i.ibb.co/k2YRYXn/passportbase-REGIONS.png);
+  width: 610px;
+  height:410px;
+  display: block;
+  margin:auto;
+  justify-content: center;
+  position: relative;
+  top:80px;
+  overflow-wrap:break-word;
+}
 
 .cup{
-  background-image: url(https://i.ibb.co/DwjCWFF/COFFEECUP.png);
+  background-image: url(https://i.ibb.co/ZN4vK72/COFFEECUP.png);
  width:350px;
  height:350px;
  display: block;
@@ -60,6 +126,17 @@ body{
  margin-left:-370px
  
  
+}
+
+.kanto{
+  
+  width:50px;
+  height:40px;
+  opacity:.4;
+}
+
+.kanto:hover{
+ opacity:1;
 }
 
 

@@ -1,52 +1,122 @@
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 import {useState, useEffect} from "react"
-const Information =(props)=>{
+import Type from './Type'
+
+const Information =()=>{
 
 
-    const initialType = {
-        name:'',
-        hp:'',
-        level:''
-        }
-        
-    const [types, setTypes] = useState([initialType])
-    const [value,setValue] = useState()
+const [types, setTypes] = useState([])
 
-    let handleValueChange = (e) =>{
-        setValue(e.target.value)
-    }
-
-    useEffect(()=>{
+ 
+   useEffect(()=>{
         const getType = async()=>{
     
             let res = await axios.get('http://localhost:3001/api/types')
-            console.log(res)
-            setTypes(res.data)
-        }
-        getType()
+            console.log(res.data)
+            setTypes(res.data.types)
+            }
+            getType()
     },[])
 
-    if (!types){
-        return(<h1>Loading please wait</h1>)
-    }else{
+    
 
+const [newData,setNewData] = useState({
+    name:'',
+    hp:'',
+    level:''
+})
+
+const handleAddNewData = (e)=>{
+    e.preventDefault()
+
+    const fieldName = e.target.getAttribute('name')
+
+    const fieldValue = e.target.value
+    const newPokemonData = {...newData}
+
+    newPokemonData[fieldName] = fieldValue 
+    setNewData(newPokemonData)
+}
+
+const handleSubmit=(e) =>{
+    e.preventDefault()
+
+    const newPokemon = {
+        name:newData.name,
+        hp:newData.hp,
+        level:newData.level
+    }
+
+    const newPokemons = [...types,newPokemon]
+    setTypes(newPokemons)
+}
     
     return(
-
-
-
-        <div>
-            <h1>Poke Passport</h1>
-            <p>Name</p>
+    <div className="passport1">
+        <div className="textboxbothcontainer">
+       <div className="textboxboth">
+        {types.map((type)=>(
+            <Type key={type.id} type={type}/>
            
+        ))}
+        </div>
+        </div>
 
-           <Link to='/stamp'>
-            <button>Choose your Region!</button>
-           </Link>
+        <div className="textbox1">
+           
+           <p> Choose your team!</p>
 
+
+          <form onSubmit = {handleSubmit}>
+            <input
+            type = 'text'
+            name = 'name'
+            required = 'required'
+            placeholder = 'Name of Pokemon...'
+            onChange = {handleAddNewData}
+            />
+            <input
+            type = 'text'
+            name = 'hp'
+            required = 'required'
+            placeholder = 'HP...'
+            onChange = {handleAddNewData}
+            />
+            <input
+            type = 'text'
+            name = 'level'
+            required = 'required'
+            placeholder = 'Level...'
+            onChange = {handleAddNewData}
+            />
+            <button type='submit'>Add To Your Team</button>
             
+          </form>
+            
+          <table>
+            <tbody>
+            <tr>
+                <th>
+                    {newData.name}
+                </th>
+                <th>
+                    {newData.hp}
+                </th>
+                <th>
+                    {newData.level}
+                </th>
+            </tr>
+            </tbody>
+           </table>
+
+           </div>
+           <div className="cup"></div>
+
         </div>
     )
-    }}
+    }
+
     export default Information
+
+    

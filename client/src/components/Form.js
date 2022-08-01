@@ -3,80 +3,71 @@ import axios from 'axios'
 import {useState, useEffect} from 'react'
 
 
-const Form =(props)=>{
-    const initialType = {
-    name:'',
-    hp:'',
-    level:''
-    }
- 
-const [types,setTypes] = useState(initialType)
-
-useEffect(()=>{
-    const getType = async()=>{
-
-        let res = await axios.get('http://localhost:3001/api/types')
-        console.log(res)
-        setTypes(res.data)
-    }
-    getType()
-},[])
+const Form =()=>{
    
-console.log(types)
+const [name, setName] =useState()
+const [age, setAge] =useState()
+const [food, setFood] =useState()
+const [drink, setDrink] =useState()
+
+
+
     return(
-        <div>
-          <div className="passport">
+        <div className="passport1">
+          <div className="textbox1">
            
-           
-            <h1>Welcome to Poke Airlines. Let's get started on building your passport!</h1>
+          <h1>Welcome to Poke Airlines. Let's get started on building your passport!</h1>
             <form >
             <input 
             type='text'
             name={'name'}
-            placeholder={'What is your name?'}/>
+            placeholder={'What is your name?'}
+            onChange= {(e) => setName(e.target.value)} />
+
+
             <input 
             type='text'
-            name={'gender'}
-            placeholder={'What is your age?'}/>
-            <label htmlFor='moreThanTwo'>What is your gender?
-            <select >
-                <option>Choose one</option>
-                <option>Male</option>
-                <option>Female</option>
-                <option>Non-binary</option>
-            </select>
-            </label>
+            name={'age'}
+            placeholder={'What is your age?'}
+            onChange= {(e) => setAge(e.target.value)} />
+           
+            <input 
+            type='text'
+            name={'food'}
+            placeholder={'What is your favorite food?'}
+            onChange= {(e) => setFood(e.target.value)} />
 
-            <label htmlFor='type'> Choose one type of Pokemon!
-                <select>
-                    <option>Choose one
-                    </option>
-                    <option value='fire'></option>
-                    <option value='water'>Water</option>
-                    <option value='grass'>Grass</option>
-                    <option value='ice'>Ice</option>
-                    <option value='ground'>Ground</option>
-                    <option value='rock'>Rock</option>
-                    <option value='steel'>Steel</option>
-                    <option value='fairy'>Fairy</option>
-                    <option value='psychic'>Psychic</option>
-                    <option value='poison'>Poison</option>
-                    <option value='normal'>Normal</option>
-                    <option value='fighting'>Fighting</option>
-                    <option value='flying'>Flying</option>
-                    <option value='dark'>Dark</option>
-                    <option value='dragon'>Dragon</option>
-                    <option value='bug'>Bug</option>
-                    <option value='electric'>Electric</option>
-                    <option value='ghost'>Ghost</option>
+            <input 
+            type='text'
+            name={'drink'}
+            placeholder={'Coffee or tea?'}
+            onChange= {(e) => setDrink(e.target.value)} />
 
-                </select>
-            </label>
-            <Link to='/information'>
-        <button type="submit">Configure Passport</button></Link></form>
-        </div>
-        </div>
-    )
+          
             
-    }
+            </form>
+            </div>
+        
+        <div className="textbox2">
+           
+          <h1>Name: {name}</h1>
+          <p>Age: {age}</p>
+          <p>Food: {food}</p>
+          <p>Drink: {drink}</p>
+
+          <Link to='/stamp'>
+            <input type='submit' value="Choose Your Region!" className='btn btn-block'/>  </Link>
+            <br/>
+             <Link to='/'>
+        <button className='btn'>Prev</button></Link>
+            </div>
+        
+        </div>
+        )
+            
+}
+
+
+
+
     export default Form
