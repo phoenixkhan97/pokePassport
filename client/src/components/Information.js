@@ -7,9 +7,14 @@ const Information =()=>{
 
 
 const [types, setTypes] = useState([])
+const [newData,setNewData] = useState({
+    name:'',
+    hp:'',
+    level:''
+})
 
  
-   useEffect(()=>{
+useEffect(()=>{
         const getType = async()=>{
     
             let res = await axios.get('http://localhost:3001/api/types')
@@ -19,14 +24,7 @@ const [types, setTypes] = useState([])
             getType()
     },[])
 
-    
-
-const [newData,setNewData] = useState({
-    name:'',
-    hp:'',
-    level:''
-})
-
+//adding data
 const handleAddNewData = (e)=>{
     e.preventDefault()
 
@@ -39,6 +37,7 @@ const handleAddNewData = (e)=>{
     setNewData(newPokemonData)
 }
 
+//submiting added data
 const handleSubmit=(e) =>{
     e.preventDefault()
 
@@ -51,6 +50,8 @@ const handleSubmit=(e) =>{
     const newPokemons = [...types,newPokemon]
     setTypes(newPokemons)
 }
+
+
     
     return(
     <div className="passport1">
@@ -65,7 +66,7 @@ const handleSubmit=(e) =>{
 
         <div className="textbox1">
            
-           <p> Choose your team!</p>
+           <p> Add To Your Pokedex!</p>
 
 
           <form onSubmit = {handleSubmit}>
@@ -90,26 +91,11 @@ const handleSubmit=(e) =>{
             placeholder = 'Level...'
             onChange = {handleAddNewData}
             />
-            <button type='submit'>Add To Your Team</button>
-            
+            <button type='submit'>Add Pokemon</button>
+            <Link to='/final'>
+        <button className='btn'>Let's Finalize Your Passport!</button></Link>
           </form>
-            
-          <table>
-            <tbody>
-            <tr>
-                <th>
-                    {newData.name}
-                </th>
-                <th>
-                    {newData.hp}
-                </th>
-                <th>
-                    {newData.level}
-                </th>
-            </tr>
-            </tbody>
-           </table>
-
+          
            </div>
            <div className="cup"></div>
 
