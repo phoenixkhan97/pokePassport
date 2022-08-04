@@ -1,4 +1,3 @@
-
 const Final = () =>{
 
     return(
@@ -6,13 +5,15 @@ const Final = () =>{
        
         <div className="textboxbothcontainer">
 
-<h1></h1>
 
 
 
 
-</div>
-<div className="cup">
+
+
+         <div className="cup">
+    
+         </div>
          </div>
         </div>
     )

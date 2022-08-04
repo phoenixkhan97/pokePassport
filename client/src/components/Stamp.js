@@ -1,33 +1,23 @@
-import axios from 'axios'
-import {useState, useEffect} from "react"
+import { useState,useEffect } from 'react'
 import Region from './Region'
 import {Link} from 'react-router-dom'
+import axios from 'axios'
 
 
 const Stamp =()=>{
 
-const [regions,setRegions] = useState([])
-
- 
-useEffect(()=>{
-       const getRegions = async()=>{
-   
-           let res = await axios.get('http://localhost:3001/api/regions')
-           setRegions(res.data)
-           console.log(res.data)
-           }
-           getRegions()
-          
-   },[])
-    
-   const handleClick = (e)=>{
-  e.preventDefault()
+    const [regions,setRegions] = useState([])
 
 
-
+useEffect(() =>{
+   const getRegions = async()=>{
+    let res = await axios.get(`http://localhost:3001/api/regions`)
+    setRegions(res.data)
    }
+   getRegions()
+},[])
 
-   
+
   
     return(
         <div className="passport1">
@@ -36,6 +26,7 @@ useEffect(()=>{
             <Region key={region.id} region={region}/>
            
         ))}
+
           </div>
         
           <div className="textbox1">

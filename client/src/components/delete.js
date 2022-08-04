@@ -7,11 +7,7 @@ const Information =()=>{
 
 const [selectedPokemon, setSelectedPokemon] = useState(null)
 const [types, setTypes] = useState([])
-const [newData,setNewData] = useState({
-    name:'',
-    hp:'',
-    level:''
-})
+
 
  
 useEffect(()=>{
@@ -22,22 +18,9 @@ useEffect(()=>{
             setTypes(res.data.types)
             }
             getType()
-    },[])
+        })
 
-//adding data
-const handleAddNewData = (e)=>{
-    e.preventDefault()
-
-    const fieldName = e.target.getAttribute('name')
-
-    const fieldValue = e.target.value
-    const newPokemonData = {...newData}
-
-    newPokemonData[fieldName] = fieldValue 
-    setNewData(newPokemonData)
-}
-
-//submiting added data
+//submiting data
 const handleSubmit=(e) =>{
     e.preventDefault()
 
@@ -63,10 +46,7 @@ const deletePokemon = async(typesId,index)=>{
     <div className="passport1">
         <div className="textboxbothcontainer">
        <div className="textboxboth">
-        {types.map((type)=>(
-            <Type key={type.id} type={type}/>
-           
-        ))}
+       
         </div>
         </div>
 
@@ -81,25 +61,26 @@ const deletePokemon = async(typesId,index)=>{
             name = 'name'
             required = 'required'
             placeholder = 'Name of Pokemon...'
-            onChange = {handleAddNewData}
+            onChange = {deletePokemon}
             />
             <input
             type = 'text'
             name = 'hp'
             required = 'required'
             placeholder = 'HP...'
-            onChange = {handleAddNewData}
+            onChange = {deletePokemon}
             />
             <input
             type = 'text'
             name = 'level'
             required = 'required'
             placeholder = 'Level...'
-            onChange = {handleAddNewData}
+            onChange = {deletePokemon}
             />
             <button type='submit'>Add Pokemon</button>
             <Link to='/final'>
         <button className='btn'>Let's Finalize Your Passport!</button></Link>
+        
           </form>
           
            </div>
@@ -108,7 +89,3 @@ const deletePokemon = async(typesId,index)=>{
         </div>
     )
     }
-
-    export default Information
-
-    
